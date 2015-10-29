@@ -17,8 +17,26 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     //MARK: - Properties
     let states = ["AK", "AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
     
+    var representatives: [Representative] = []
     
     @IBAction func findButtonTapped(sender: AnyObject) {
+        
+        let stateNum = pickerView.selectedRowInComponent(0)
+        let state = states[stateNum]
+        
+        RepresentativeController.searchRepsByState(state) { (representatives) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.representatives = representatives
+                self.performSegueWithIdentifier("listSegue", sender: self)
+            })
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "listSegue"{
+            let resultViewController = segue.destinationViewController as! ResultsTableViewController
+            resultViewController.representatves = self.representatives
+        }
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -36,9 +54,7 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        RepresentativeController.searchRepsByState("VA") { (representatives) -> Void in
-            print(representatives[0].name)
-        }
+
         
     }
     
