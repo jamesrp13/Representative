@@ -11,7 +11,7 @@ import UIKit
 class ResultsTableViewController: UITableViewController {
 
     
-    var representatves: [Representative] = []
+    var representatives: [Representative] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,22 +30,32 @@ class ResultsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.representatves.count
+        return self.representatives.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cellID", forIndexPath: indexPath)
         
-        if let name = representatves[indexPath.row].name{
+        if let name = representatives[indexPath.row].name{
             cell.textLabel?.text = name
         }
         
-        if let party = representatves[indexPath.row].party{
+        if let party = representatives[indexPath.row].party{
             
             cell.detailTextLabel?.text = party
         }
 
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailSegue" {
+            let detailViewController = segue.destinationViewController as! RepresentativeDetailViewController
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)!
+            
+            detailViewController.representative = self.representatives[indexPath.row]
+        }
     }
 
 }

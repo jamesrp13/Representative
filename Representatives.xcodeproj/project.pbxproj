@@ -17,7 +17,8 @@
 		1ABD265E1BE2B3E600E770A3 /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD265D1BE2B3E600E770A3 /* Representative.swift */; };
 		1ABD26621BE2B90E00E770A3 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD26611BE2B90E00E770A3 /* NetworkController.swift */; };
 		1ABD26641BE2BEAA00E770A3 /* RepresentativeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD26631BE2BEAA00E770A3 /* RepresentativeController.swift */; };
-		1FBA7CE31BE2C8A3002D3A47 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA7CE21BE2C8A3002D3A47 /* ResultsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1ABD26681BE2D43000E770A3 /* RepresentativeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD26671BE2D43000E770A3 /* RepresentativeDetailViewController.swift */; };
+		1FBA7CE31BE2C8A3002D3A47 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA7CE21BE2C8A3002D3A47 /* ResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1ABD265D1BE2B3E600E770A3 /* Representative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
 		1ABD26611BE2B90E00E770A3 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		1ABD26631BE2BEAA00E770A3 /* RepresentativeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentativeController.swift; sourceTree = "<group>"; };
+		1ABD26671BE2D43000E770A3 /* RepresentativeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepresentativeDetailViewController.swift; path = ../RepresentativeDetailViewController.swift; sourceTree = "<group>"; };
 		1FBA7CE21BE2C8A3002D3A47 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				1ABD26611BE2B90E00E770A3 /* NetworkController.swift */,
 				1ABD26631BE2BEAA00E770A3 /* RepresentativeController.swift */,
 				1FBA7CE21BE2C8A3002D3A47 /* ResultsTableViewController.swift */,
+				1ABD26671BE2D43000E770A3 /* RepresentativeDetailViewController.swift */,
 				01AD26061BE171D9009BF4D2 /* Assets.xcassets */,
 				01AD26081BE171D9009BF4D2 /* LaunchScreen.storyboard */,
 				01AD260B1BE171D9009BF4D2 /* Info.plist */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FBA7CE31BE2C8A3002D3A47 /* ResultsTableViewController.swift in Sources */,
+				1ABD26681BE2D43000E770A3 /* RepresentativeDetailViewController.swift in Sources */,
 				1ABD26641BE2BEAA00E770A3 /* RepresentativeController.swift in Sources */,
 				1ABD26621BE2B90E00E770A3 /* NetworkController.swift in Sources */,
 				01AD262E1BE17215009BF4D2 /* SearchViewController.swift in Sources */,

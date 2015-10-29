@@ -35,7 +35,7 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "listSegue"{
             let resultViewController = segue.destinationViewController as! ResultsTableViewController
-            resultViewController.representatves = self.representatives
+            resultViewController.representatives = self.representatives
         }
     }
     
